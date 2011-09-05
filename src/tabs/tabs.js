@@ -240,7 +240,7 @@
 		}); 
 		
 		// open initial tab
-		if (location.hash && conf.tabs == "a" && root.find("[href=" +location.hash+ "]").length) {
+		if (location.hash && conf.tabs == "a" && root.find("[href=" +location.hash.replace(/[^\w]|_/g, "")+ "]").length) {
 			self.click(location.hash);
 
 		} else {
